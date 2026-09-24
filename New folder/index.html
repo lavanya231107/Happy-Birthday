@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Akash</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:ital,wght@1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="spaceBackground">
+    <div class="milky-way"></div>
+    <div class="stars stars-small"></div>
+    <div class="stars stars-medium"></div>
+    <div class="stars stars-bright"></div>
+    <div id="shootingStars"></div>
+    <div class="moon" id="moonElement">
+        <div class="moon-glow"></div>
+        <div class="moon-surface"></div>
+    </div>
+</div>
+
+<div id="magicLayer"></div>
+
+<button id="soundToggle" class="sound-toggle" aria-label="Toggle sound" title="Toggle sound">🔊</button>
+
+<!-- LOADING -->
+<section id="loadingScreen" class="screen active">
+    <div class="loading-core">
+        <div class="orbit-loader">
+            <div class="loader-ring"></div>
+            <div class="loader-star">✦</div>
+        </div>
+        <div class="loading-label">Launch sequence</div>
+        <div id="loadingText" class="loading-text">Warming up the engines...</div>
+        <div class="loading-line"><span id="loadingProgress"></span></div>
+        <div class="loading-status">MISSION ID : <strong>AK25092007</strong></div>
+    </div>
+</section>
+
+<!-- CHAPTER 1 -->
+<section id="missionScreen" class="screen hidden">
+    <button class="back-button" id="missionBack">← Back</button>
+    <div class="mission-wrapper">
+        <div class="mission-box">
+            <div class="mission-topline"><span class="status-dot"></span> Mission control <span class="line"></span> Online</div>
+            <div class="hero-planet"><i></i></div>
+            <div class="mission-kicker">Mission briefing</div>
+            <h1>Your Birthday<span>Space Mission</span></h1>
+            <p class="mission-description">The sky looks a little brighter today. This small mission was built for you, Akasheyyyy.</p>
+            <div class="mission-grid">
+                <div class="data-card"><small>Mission ID</small><strong>AK25092007</strong><em>Saved for you</em></div>
+                <div class="data-card"><small>Today</small><strong>Your birthday</strong><em>Special date</em></div>
+                <div class="data-card"><small>Captain</small><strong class="green">Akasheyyyy</strong><em>On board</em></div>
+                <div class="data-card"><small>Friendship</small><strong class="cyan">100%</strong><em>Still going</em></div>
+            </div>
+            <div class="mission-footer"><span>25 • 09 • 2007</span><span>Made by BOW</span></div>
+        </div>
+        <button class="main-next-button" id="missionNext">Begin the journey <span>→</span></button>
+    </div>
+</section>
+
+<!-- CHAPTER 2 -->
+<section id="originScreen" class="screen hidden">
+    <button class="back-button" id="originBack">← Back</button>
+    <div class="origin-content">
+        <div class="chapter-number">Chapter 2</div>
+        <h2>Where it began</h2>
+        <div id="starText" class="cinematic-text">Looking at the night sky...</div>
+        <svg class="link-stars" viewBox="0 0 240 90" aria-hidden="true">
+            <path id="linkPath" class="link-line" d="M36 60 C 90 8, 150 8, 204 60"/>
+            <circle class="s1" cx="36" cy="60" r="5"/><circle class="s2" cx="204" cy="60" r="5"/>
+            <circle class="pulse" r="3"><animateMotion dur="3.4s" repeatCount="indefinite" path="M36 60 C 90 8, 150 8, 204 60"/></circle>
+        </svg>
+        <div class="friend-lines">
+            <div>Among billions of stars...</div>
+            <div>one became hard to miss.</div>
+            <div class="highlight-line">That star was you.</div>
+            <div id="friendName">AKASHEYYYY</div>
+        </div>
+        <p class="origin-note">Some people come into your life quietly and never really leave. You are one of them.</p>
+        <ul class="timeline">
+            <li>It started with a simple hello.</li>
+            <li>It grew with every joke and every silly plan.</li>
+            <li>It stayed strong through every fight.</li>
+        </ul>
+        <button class="main-next-button" id="originNext">Follow the calendar <span>→</span></button>
+    </div>
+</section>
+
+<!-- CHAPTER 3 -->
+<section id="calendarScreen" class="screen hidden">
+    <button class="back-button" id="calendarBack">← Back</button>
+    <div class="calendar-content">
+        <div class="chapter-number">Chapter 3</div>
+        <h2 class="calendar-heading">September 2026</h2>
+        <p class="calendar-sub">One day in this month is glowing.</p>
+        <div class="calendar-box">
+            <div class="calendar-weekdays" id="calendarWeekdays"></div>
+            <div class="calendar-grid" id="calendarGrid"></div>
+        </div>
+        <p class="calendar-message">The 25th. This is the day you were born, and it is worth marking every year.</p>
+        <button class="main-next-button" id="calendarNext">Look at the planets <span>→</span></button>
+    </div>
+</section>
+
+<!-- CHAPTER 4 -->
+<section id="solarScreen" class="screen hidden">
+    <button class="back-button" id="solarBack">← Back</button>
+    <div class="solar-page">
+        <div class="solar-visual">
+            <div class="solar-system">
+                <div class="sun"></div>
+                <div class="orbit orbit-1"><div class="planet mercury"></div></div>
+                <div class="orbit orbit-2"><div class="planet venus"></div></div>
+                <div class="orbit orbit-3"><div class="planet earth"></div></div>
+                <div class="orbit orbit-4"><div class="planet mars"></div></div>
+                <div class="orbit orbit-5"><div class="planet jupiter"></div></div>
+                <div class="orbit orbit-6"><div class="planet saturn"></div></div>
+                <div class="orbit orbit-7"><div class="planet uranus"></div></div>
+                <div class="orbit orbit-8"><div class="planet neptune"></div></div>
+            </div>
+        </div>
+        <div class="solar-textbox">
+            <div class="chapter-number">Chapter 4</div>
+            <h2>Different paths, same pull</h2>
+            <p>Every planet has its own path, yet none of them drift apart. Some friendships work the same way.</p>
+            <button class="main-next-button" id="solarNext">See the numbers <span>→</span></button>
+        </div>
+    </div>
+</section>
+
+<!-- CHAPTER 5 -->
+<section id="statusScreen" class="screen hidden">
+    <button class="back-button" id="statusBack">← Back</button>
+    <div class="status-wrapper">
+        <div class="chapter-number">Chapter 5</div>
+        <h2>The numbers</h2>
+        <p class="status-intro">A quick check on this friendship.</p>
+        <div class="status-grid">
+            <div class="status-card">
+                <div class="status-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></div>
+                <div class="status-name">Fights</div>
+                <div class="status-value"><span class="count-up" data-to="100">0</span>%</div>
+                <div class="status-bar"><span style="width:100%"></span></div>
+            </div>
+            <div class="status-card">
+                <div class="status-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="1.8"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></svg></div>
+                <div class="status-name">Chaos</div>
+                <div class="status-value"><span class="count-up" data-to="100">0</span>%</div>
+                <div class="status-bar"><span style="width:100%"></span></div>
+            </div>
+            <div class="status-card">
+                <div class="status-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></div>
+                <div class="status-name">Care</div>
+                <div class="status-value"><span class="count-up" data-to="100">0</span>%</div>
+                <div class="status-bar"><span style="width:100%"></span></div>
+            </div>
+            <div class="status-card">
+                <div class="status-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 14c1 2 2.5 3 4 3s3-1 4-3"/><circle cx="9" cy="9.5" r=".8"/><circle cx="15" cy="9.5" r=".8"/></svg></div>
+                <div class="status-name">Laughs</div>
+                <div class="status-value"><span class="count-up" data-to="100">0</span>%</div>
+                <div class="status-bar"><span style="width:100%"></span></div>
+            </div>
+        </div>
+        <div class="overall-status-box">
+            <div class="overall-label">Overall score</div>
+            <div class="overall-percent"><span class="count-up" data-to="100">0</span>%</div>
+            <div class="overall-bar"><span style="width:100%"></span></div>
+            <p class="overall-line">A full score, with everything included.</p>
+            <button class="main-next-button" id="statusNext">Open the surprise <span>→</span></button>
+        </div>
+    </div>
+</section>
+
+<!-- CHAPTER 6 -->
+<section id="passwordScreen" class="screen hidden">
+    <button class="back-button" id="passwordBack">← Back</button>
+    <div class="password-wrapper">
+        <div class="lock-icon"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="#7fdcff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+        <div class="chapter-number">Chapter 6</div>
+        <h2>Almost there</h2>
+        <p>The surprise is inside. Enter the date to open it.</p>
+        <div class="password-box">
+            <label for="passwordInput">Password</label>
+            <div class="password-field">
+                <input type="password" id="passwordInput" placeholder="Type password here" autocomplete="off">
+                <button id="showPassword" type="button">SHOW</button>
+            </div>
+            <div class="pin-dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div id="passwordFeedback" class="password-feedback"></div>
+            <button id="unlockButton" class="unlock-button">Unlock</button>
+        </div>
+        <div class="password-hint">Hint: it is hiding in the mission ID from page one. Format: DDMMYYYY.</div>
+    </div>
+</section>
+
+<!-- FINAL -->
+<section id="finalScreen" class="screen hidden">
+    <button class="back-button" id="finalBack">← Back</button>
+    <div id="sparkleBurst"></div>
+    <div class="final-wrapper">
+        <div class="final-top">Surprise unlocked</div>
+        <h1>Happy Birthday</h1>
+        <h2>AKASHEYYYY</h2>
+        <div class="final-date">25 • 09 • 2026</div>
+        <div class="cake">
+            <div class="candle"><div class="flame"></div></div>
+            <div class="cake-top"></div>
+            <div class="cake-body"></div>
+            <div class="cake-base"></div>
+        </div>
+        <p class="cake-hint" id="cakeHint">Blow out the candle, then make a wish.</p>
+        <button class="wish-button" id="blowButton">Blow the candle</button>
+        <button class="wish-button" id="wishButton" disabled>✦ Make a wish</button>
+        <div id="wishResult" class="wish-result">
+            <span>Your wish is on its way to the stars.</span>
+            <span>The sky heard it, and the sky does not forget.</span>
+            <span>It will come true. Just wait and see.</span>
+        </div>
+        <p class="final-message">Thank you for the laughs, the fights, and all the small moments in between.</p>
+        <p class="final-message">May this year be kinder to you and bring everything you are working for.</p>
+        <div class="final-signature">From your best friend, BOW</div>
+        <button class="letter-button" id="letterButton" aria-label="Open letter">✦ <span>Read the letter</span></button>
+    </div>
+</section>
+
+<!-- LETTER -->
+<section id="letterScreen" class="screen hidden">
+    <button class="back-button" id="letterBack">← Back</button>
+
+    <div class="letter-wrapper">
+        <div class="letter-seal">✦</div>
+
+        <div class="letter-heading">Dear Akasheyyy, 🤍</div>
+
+        <p class="letter-paragraph">Happy Birthday to someone who became a very special part of my life without me even realizing it.</p>
+
+        <p class="letter-paragraph">I don't think our friendship can be explained in just a few words. We've had beautiful moments, stupid fights, misunderstandings, silence, and moments where we didn't know what to say to each other. But somehow, through everything, our friendship still means so much to me.</p>
+
+        <p class="letter-paragraph">You are one of those people I never expected to meet, but I'm genuinely grateful that I did.</p>
+
+        <p class="letter-paragraph">I know I've made mistakes, and I know some things cannot be fixed just by saying sorry. I don't want to make empty promises either. I just want my actions, with time, to show you how much this friendship actually means to me.</p>
+
+        <p class="letter-paragraph">You have been a beautiful part of so many of my memories. From random conversations to silly fights, from laughing at the most unnecessary things to being there during difficult moments — I'll always keep those memories close.</p>
+
+        <p class="letter-paragraph">And maybe that's why I connect you with stars so much. 🌌 There are countless stars in the sky, but somehow, a few become special enough for us to always look for them.</p>
+
+        <p class="letter-highlight">You're one of those stars for me. ✨</p>
+
+        <p class="letter-paragraph">I hope this new year of your life brings you peace, happiness, success, and everything you've been wishing for.</p>
+
+        <p class="letter-paragraph">No matter how many silly arguments we have, I hope we never become strangers.</p>
+
+        <p class="letter-paragraph letter-birthday">Happy Birthday, Akasheyyy. 🤍✨<br>Stay happy. Stay crazy. Keep shining.</p>
+
+        <p class="letter-paragraph letter-ending">And yes… another year of me annoying you successfully begins. 😂</p>
+
+        <div class="letter-poem">
+            <span>ஒருநாள் நம் வாழ்க்கை பாதைகள் வெவ்வேறாகிப் போனாலும்,</span>
+            <span>என் நினைவுகளின் அழகான பக்கத்தில்</span>
+            <span>நம் நட்பின் நினைவுகளோடு</span>
+            <strong>உன் பெயர் மட்டும் எப்போதும் இருக்கும்… 🤍✨</strong>
+        </div>
+
+        <div class="letter-signature">From your best friend<strong>BOW 🤍</strong></div>
+
+        <button class="restart-button" id="letterRestartButton">↻ Watch again</button>
+    </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
